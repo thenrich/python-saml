@@ -47,7 +47,7 @@ def create(
     # http://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf Section
     # 1.3.3
     now = now.replace(microsecond=0)
-    now_iso = now.isoformat()
+    now_iso = now.strftime('%Y-%m-%dT%H:%M:%SZ')
 
     unique_id = _uuid()
     unique_id = unique_id.hex
